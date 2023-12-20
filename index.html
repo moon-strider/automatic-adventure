@@ -1,0 +1,1297 @@
+<!doctype html>
+<html ⚡ lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="canonical" href="/index.html" />
+        <meta name="viewport" content="width=device-width" />
+        <style amp-custom>
+
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+            .header-block {
+                display: flex;
+                flex-direction: row;
+                background-color: black;
+                padding: 1.5vh 5vh 1.5vh 5vh;
+                justify-content: space-between;
+            }
+
+            .header-block-logo {
+                display: flex;
+                flex-direction: row;
+                font-size: 3vw;
+            }
+
+            .header-block-logo-ax {
+                font-weight: bold;
+                color: white;
+            }
+
+            .header-block-logo-it {
+                font-weight: lighter;
+                color: orange;
+            }
+
+            .header-block-menu {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 50%;
+            }
+
+            .header-block-menu-item {
+                font-size: 2vw;
+                color: white;
+                width: 100%;
+                text-align: center;
+                transition: .15s ease-out;
+            }
+
+            .header-block-menu-item:hover {
+                transition: .15s ease-in;
+                font-weight: bold;
+                font-size: 15pt;
+            }
+
+            .landing-block {
+                padding: 7.5vh 5vw 7.5vh 5vw;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/buildings.png");
+                background-size: cover;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                height: 70vh;
+            }
+
+            .landing-block-left {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                width: 35vw;
+                height: 100%;
+            }
+
+            .landing-block-left-logo {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .landing-block-left-logo-ax {
+                font-size: 5vw;
+                font-weight: bolder;
+                color: white;
+            }
+
+            .landing-block-left-logo-it {
+                font-size: 5vw;
+                font-weight: light;
+                color: orange;
+            }
+
+            .landing-block-left-slogan {
+                font-size: 2vw;
+                color: white;
+                border-radius: 10px;
+            }
+
+            .landing-block-left-line {
+                color: white;
+                width: 15%;
+                border-top: 1px solid white;
+                border-bottom: 1px solid white;
+                margin: 3vh 0 3vh 0;
+                height: 3px;
+                background-color: rgb(255, 255, 255);
+                border: none;
+            }
+
+            .landing-block-left-filler {
+                color: white;
+                font-size: 1.5vw;
+                border-radius: 10px;
+            }
+
+            .landing-block-left-button {
+                height: 6vh;
+                width: 15vw;
+                padding: 0 2vw 0 2vw;
+                background-color: #00000094;
+                color: white;
+                border: 2px solid white;
+                margin-top: 3vh;
+                font-size: 1.5vw;
+            }
+
+            .landing-block-right-cont {
+                display: flex;
+                flex-direction: column;
+                width: 30vw;
+                height: 65vh;
+                margin-right: 10vw;
+            }
+
+            .landing-block-right {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                margin-top: 10vh;
+                padding: 4vh 4vh 2vw 2vw;
+                background-color: white;
+                border-radius: 5px;
+                height: 35vh;
+            }
+
+            .landing-block-right-reg {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                width: 100%;
+            }
+
+            .landing-block-right-reg-text, .landing-block-right-reg-text-highlighted {
+                font-size: 1.6vw;
+            }
+
+            .landing-block-right-reg-text-highlighted {
+                color: orange;
+                font-weight: bolder;
+            }
+
+            .landing-block-right-reg-fields {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 100%;
+                width: 100%;
+            }
+
+            .landing-block-right-reg-input {
+                outline: none;
+                border: none;
+                border-bottom: 1px solid gray;
+                transition: 0.25s ease-in-out;
+                margin-top: 3vh;
+                font-size: 0.7vw + 0.7vh;
+            }
+
+            .landing-block-right-reg-input:focus {
+                border: none;
+                border-bottom: 1px solid gray;
+                transition: 0.25s ease-in-out;
+                font-size: 1.5vw;
+            }
+
+            .landing-block-right-reg-button {
+                width: 100%;
+                height: 6vh;
+                font-size: 10pt;
+                border: none;
+                color: white;
+                background-color: rgb(218, 142, 2);
+                transform: translateY(-1vh);
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            .post-reg-footer {
+                height: 10vh;
+                width: 100vw;
+                border-bottom: 2px solid rgba(128, 128, 128, 0.671);
+                display: flex;
+                flex-direction: row;
+                padding-bottom: 3vh;
+                padding-top: 3vh;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+
+            .post-reg-footer-left {
+                display: flex;
+                flex-direction: column;
+                width: 30%;
+                padding: 1vh 1vw 1vh 8vw;
+            }
+
+            .post-reg-footer-left-title {
+                padding-top: .7vh;
+                font-size: 2vw;
+                font-weight: bold;
+                color: rgba(0, 0, 0, 0.774)
+            }
+
+            .post-reg-footer-left-filler {
+                font-size: 1.1vw;
+                color: gray;
+            }
+
+            .post-reg-footer-right {
+                padding-top: 1vh;
+                width: 45%;
+                height: 55%;
+                font-size: 3vw;
+            }
+
+            .tabs-block {
+                display: flex;
+                flex-direction: row;
+                padding: 5vh 10vw 5vh 10vw;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .tabs-block-tablist {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .tab {
+                height: 9vw;
+                width: 9vw;
+                border: 1px solid white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8px;
+                background-color: rgb(50, 47, 47);
+            }
+
+            .tab-selected {
+                background-color: rgb(203, 122, 0);
+            }
+
+            .tab-text {
+                text-align: center;
+                color: white;
+                font-size: 1.5vw;
+                font-weight: bold;
+            }
+
+            .tabs-block-desc {
+                width: 40%;
+            }
+
+            .tabs-block-desc-title {
+                color: rgb(26, 25, 25);
+                font-size: 1.8vw;
+                font-weight: bold;
+                margin-bottom: 4.7vh;
+            }
+
+            .tabs-block-desc-filler {
+                color: gray;
+                font-size: 1.3vw;
+                margin: 2.7vh 0 2.7vh 0;
+            }
+
+            .tabs-block-desc-button {
+                margin-top: 3.2vh;
+                background-color: rgb(203, 122, 0);
+                color: white;
+                font-weight: 600;
+                font-size: 1.3vw;
+                padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+                border: none;
+                border-radius: 7px;
+            }
+
+            .tabs-block-image {
+                width: 21vw;
+                height: 21vw;
+            }
+
+            .sublist-block, .picture-block {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 10vw 3vh 7vw;
+            }
+
+            .sublist-block-image, .picture-block-image {
+                width: 35vw;
+                height: 40vh;
+            }
+
+            .sublist-block-desc {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: start;
+                width: 40%;
+                height: 80%;
+            }
+
+            .sublist-block-desc-title, .picture-block-desc-title {
+                font-size: 2vw;
+                font-weight: bold;
+            }
+
+            .sublist-block-desc-line, .picture-block-desc-line {
+                background-color: orange;
+                height: 3px;
+                width: 5vw;
+                border: none;
+                margin: 0;
+            }
+
+            .sublist-block-list-item-desc-filler, 
+            .sublist-block-desc-filler, 
+            .picture-block-desc-filler, 
+            .awesome-block-filler, 
+            .pricing-block-filler,
+            .review-block-filler,
+            .contact-block-filler {
+                color: gray;
+                font-size: 1.2vw;
+            }
+
+            .sublist-block-list-item {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 1.5vw;
+            }
+
+            .sublist-block-list-item-desc {
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+            }
+
+            .sublist-block-list-item-image {
+                width: 3vw;
+                height: 3vw;
+            }
+
+            .sublist-block-list-item-desc-title {
+                color: rgb(50, 47, 47);
+                font-size: 1.6vw;
+                font-weight: bold;
+            }
+
+            .picture-block-desc {
+                display: flex;
+                flex-direction: column;
+                padding-left: 4vw;
+                height: 50%;
+                width: 40%;
+                justify-content: space-around;
+            }
+
+            .awesome-block {
+                display: flex;
+                flex-direction: column;
+                padding: 7vh 0 0 0;
+            }
+
+            .awesome-block-title, 
+            .pricing-block-title, 
+            .review-block-title,
+            .contact-block-title {
+                font-size: 3vw;
+                text-align: center;
+                margin-bottom: 2vh;
+            }
+
+            .awesome-block-filler, 
+            .pricing-block-filler, 
+            .review-block-filler,
+            .contact-block-filler {
+                text-align: center;
+            }
+
+            .awesome-block-line, 
+            .pricing-block-line, 
+            .review-block-line,
+            .contact-block-line {
+                background-color: orange;
+                height: 3px;
+                width: 5vw;
+                border: none;
+                margin-bottom: 2vh;
+            }
+
+            .awesome-block-list {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                height: 45%;
+                padding: 5vh 5vw 0 5vw;
+            }
+
+            .awesome-block-list-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 30%;
+                justify-content: space-around;
+            }
+
+            .awesome-block-list-item-icon {
+                width: 4vw;
+                height: 4vw;
+            }
+
+            .awesome-block-list-item-title {
+                font-size: 2vw;
+            }
+
+            .pricing-block {
+                padding: 7vh 0 0 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgba(128, 128, 128, 0.137);
+                height: 70vh;
+            }
+
+            .pricing-block-list {
+                margin-top: 4vh;
+                width: 70%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: last baseline;
+            }
+
+            .pricing-block-list-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                width: 20vw;
+            }
+
+            .pricing-block-list-item-title {
+                color: white;
+                font-size: 1.5vw;
+                font-weight: bold;
+                padding: 1vh 0 1vh 0;
+                background-color: rgb(50, 47, 47);
+                width: 100%;
+            }
+
+            .pricing-block-list-item-cost {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: last baseline;
+                color: white;
+                background-color: rgb(50, 47, 47);
+                border-top: 2px solid white;
+                width: 100%;
+            }
+
+            .pricing-block-list-item-cost-sign {
+                font-size: 2vw;
+            }
+
+            .pricing-block-list-item-cost-number {
+                font-size: 5vw;
+            }
+
+            .pricing-block-list-item-desc {
+                font-style: italic;
+                background-color: rgb(50, 47, 47);
+                width: 100%;
+                border-bottom: 5px solid rgb(203, 122, 0);
+                padding: 0 0 2vh 0;
+            }
+
+            .pricing-block-list-item-desc,
+            .pricing-block-list-item-perks-list-item {
+                font-size: 1vw;
+                color: gray;
+            }
+
+            .pricing-block-list-item-popular {
+                background-color: rgb(203, 122, 0);
+                width: 100%;
+                padding: 1vh 0 1vh 0;
+                color: white;
+                font-size: 1.1vw;
+                font-weight: bold;
+            }
+
+            .pricing-block-list-item-perks-list {
+                background-color: white;
+                width: 100%;
+            }
+
+            .pricing-block-list-item-perks-list-item {
+                padding: 1vh 0 1vh 0;
+                border-bottom: 2px solid rgba(128, 128, 128, 0.137);
+            }
+
+            .review-block {
+                height: 55vh;
+                padding: 10vh 15vw 10vh 15vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            .review-block-list {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+
+            .review-block-list-item {
+                display: flex;
+                flex-direction: column;
+                width: 15vw;
+            }
+
+            .review-block-list-item-text {
+                align-self: center;
+                background-color: rgba(128, 128, 128, 0.144);
+                color: gray;
+                font-size: 1vw;
+                font-style: italic;
+                width: 100%;
+                padding: 2vh 1vh 2vh 1vh;
+                margin-bottom: 2vh;
+            }
+
+            .review-block-list-item-person {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .review-block-list-item-person-image {
+                height: 5vw;
+                width: 5vw;
+            }
+
+            .review-block-list-item-person-info {
+                display: flex;
+                flex-direction: column;
+                padding-left: 1.5vw;
+            }
+
+            .review-block-list-item-person-info-name {
+                color: rgb(50, 47, 47);
+                font-size: 1.7vw;
+                font-weight: bold;
+            }
+
+            .review-block-list-item-person-info-position {
+                font-size: 1.2vw;
+                color: gray;
+            }
+
+            .design-block {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/design.png");
+                height: 35vh;
+                background-size: cover;
+                padding: 6vh 15vw 6vh 15vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .design-block-title {
+                font-size: 2.5vw;
+                color: white;
+                width: 100%;
+                text-align: center;
+            }
+
+            .design-block-line {
+                margin: 4vh auto 4vh auto;
+                width: 5vw;
+                color: white;
+                height: 4px;
+                background-color: white;
+                border: none;
+            }
+
+            .design-block-filler {
+                color: rgb(175, 174, 174);
+                font-size: 1.7vw;
+                font-weight: lighter;
+                text-align: center;
+            }
+
+            .design-block-button {
+                margin-top: 4vh;
+                border: 2px solid white;
+                background-color: #00000000;
+                color: white;
+                padding: 2vh 2vw 2vh 2vw;
+                font-size: 1.5vw;
+                width: 20%;
+            }
+
+            .contact-block {
+                display: flex;
+                flex-direction: column;
+                padding: 6vh 10vw 6vh 10vw;
+            }
+
+            .contact-block-info {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                height: 100%;
+            }
+
+            .contact-block-info-list {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 4vh;
+                height: 100%;
+                width: 45%;
+            }
+
+            .contact-block-info-list-item {
+                margin-bottom: 3vh;
+                text-decoration: none;
+                font-size: 1.5vw;
+                color: gray;
+                border: none;
+                width: 100%;
+                border-bottom: 2px solid gray;
+                outline: none;
+            }
+
+            .contact-block-info-textarea {
+                padding: 9vh 0 0 0;
+                margin-bottom: 5.85vh;
+                width: 46%;
+                font-size: 1.5vw;
+                color: gray;
+                border: none;
+                border-bottom: 2px solid gray;
+                outline: none;
+            }
+
+            .contact-block-button {
+                background-color: rgb(203, 122, 0);
+                color: white;
+                font-size: 1.5vw;
+                padding: 2vh 2vw 2vh 2vw;
+                width: 15vw;
+                align-self: center;
+                border-radius: 5px;
+            }
+
+            .footer-block {
+                height: 7vh;
+                background-color: black;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .footer-block-icons-item {
+                color: white;
+                font-size: 1.7vw;
+                margin: 0 1vw 0 1vw;
+            }
+
+            .footer-block-trademark {
+                color: rgba(255, 255, 255, 0.559);
+                font-size: 1.1vh;
+            }
+
+            .tabs-block, .picture-block {
+                height: 55vh;
+                background-color: rgba(128, 128, 128, 0.137);
+            }
+
+            .sublist-block, .awesome-block, .contact-block {
+                height: 55vh;
+                background-color: white;
+            }
+        </style>
+        <title>Контрольная работа 4</title>
+        <style amp-boilerplate>
+            body {
+              -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+              -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+              -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+              animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            }
+            @-webkit-keyframes -amp-start {
+              from {
+                visibility: hidden;
+              }
+              to {
+                visibility: visible;
+              }
+            }
+            @-moz-keyframes -amp-start {
+              from {
+                visibility: hidden;
+              }
+              to {
+                visibility: visible;
+              }
+            }
+            @-ms-keyframes -amp-start {
+              from {
+                visibility: hidden;
+              }
+              to {
+                visibility: visible;
+              }
+            }
+            @-o-keyframes -amp-start {
+              from {
+                visibility: hidden;
+              }
+              to {
+                visibility: visible;
+              }
+            }
+            @keyframes -amp-start {
+              from {
+                visibility: hidden;
+              }
+              to {
+                visibility: visible;
+              }
+            }
+        </style>
+        <noscript>
+                <style amp-boilerplate>
+                    body {
+                        -webkit-animation: none;
+                        -moz-animation: none;
+                        -ms-animation: none;
+                        animation: none;
+                    }
+                </style>
+        </noscript>
+        <meta name="description" content="Контрольная работа 4">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+    </head>
+    <body>
+        <div class="header-block">
+            <div class="header-block-logo">
+                <div class="header-block-logo-ax">
+                    AX
+                </div>
+                <div class="header-block-logo-it">
+                    IT
+                </div>
+            </div>
+            <div class="header-block-menu">
+                <div class="header-block-menu-item">
+                    Features
+                </div>
+                <div class="header-block-menu-item">
+                    About
+                </div>
+                <div class="header-block-menu-item">
+                    Pricing
+                </div>
+                <div class="header-block-menu-item">
+                    Reviews
+                </div>
+                <div class="header-block-menu-item">
+                    Contact
+                </div>
+            </div>
+        </div>
+
+        <div class="landing-block">
+            <div class="landing-block-left">
+                <div class="landing-block-left-logo">
+                    <div class="landing-block-left-logo-ax">
+                        AX
+                    </div>
+                    <div class="landing-block-left-logo-it">
+                        IT
+                    </div>
+                </div>
+                <div class="landing-block-left-slogan">
+                    MODERN AXURE TEMPLATE FOR BEAUTIFUL PROTOTYPES
+                </div>
+                <hr class="landing-block-left-line"/>
+                <div class="landing-block-left-filler">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis purus quis ligula fringilla placerat. Sed quis lacus at nibh convallis lacinia vitae non augue.
+                </div>
+                <button class="landing-block-left-button">
+                    Download
+                </button>
+            </div>
+            <div class="landing-block-right-cont">
+                <div class="landing-block-right">
+                    <div class="landing-block-right-reg">
+                        <div class="landing-block-right-reg-text">
+                            Try Your
+                        </div>
+                        <div class="landing-block-right-reg-text-highlighted">
+                            FREE
+                        </div>
+                        <div class="landing-block-right-reg-text">
+                            Trial Today
+                        </div>
+                    </div>
+                    <div class="landing-block-right-reg-fields">
+                        <input class="landing-block-right-reg-input" placeholder="Name">
+                        <input class="landing-block-right-reg-input" placeholder="Email">
+                        <input class="landing-block-right-reg-input" placeholder="Password">
+                    </div>
+                </div>
+                <button class="landing-block-right-reg-button">Get Started</button>
+            </div>
+        </div>
+
+        <div class="post-reg-footer">
+            <div class="post-reg-footer-left">
+                <div class="post-reg-footer-left-title">
+                    Social Media
+                </div>
+                <div class="post-reg-footer-left-filler">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis purus quis ligula fringilla placerat.
+                </div>
+            </div>
+            <image src="images/logos_big.png" class="post-reg-footer-right" alt="ICONS"/>
+        </div>
+
+        <div class="tabs-block">
+            <div class="tabs-block-tablist">
+                <div class="tab tab-selected">
+                    <p class="tab-text">TAB 1</p>
+                </div>
+                <div class="tab">
+                    <p class="tab-text">TAB 2</p>
+                </div>
+                <div class="tab">
+                    <p class="tab-text">TAB 3</p>
+                </div>
+            </div>
+            <div class="tabs-block-desc">
+                <div class="tabs-block-desc-title">
+                    Tabs with soft transitioning effect.
+                </div>
+                <div class="tabs-block-desc-filler">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis purus quis ligula fringilla placerat. Sed quis lacus at nibh convallis lacinia vitae non augue. Maecenas eu lacus nibh. Duis bibendum efficitur dignissim.
+                </div>
+                <div class="tabs-block-desc-filler">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis purus quis ligula fringilla placerat.
+                </div>
+                <button class="tabs-block-desc-button">
+                    Download
+                </button>
+            </div>
+            
+            <amp-img
+            src="images/tabs_block_img.png" 
+            class="tabs-block-image" 
+            alt="TABS BLOCK IMAGE"
+            layout="responsive"
+            width="266"
+            height="150"
+            ></amp-img>
+        </div>
+
+        <div class="sublist-block">
+            <amp-img
+            src="images/sublist_block_img.png" 
+            class="sublist-block-image" 
+            alt="SUBLIST BLOCK IMAGE"
+            layout="responsive"
+            width="266"
+            height="150"
+            ></amp-img>
+            <div class="sublist-block-desc">
+                <div class="sublist-block-desc-title">
+                    Sub list section
+                </div>
+                <hr class="sublist-block-desc-line">
+                <div class="sublist-block-desc-filler">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis purus quis ligula fringilla placerat. Sed quis lacus at nibh convallis lacinia vitae non augue.
+                </div>
+                <div class="sublist-block-list">
+                    <div class="sublist-block-list-item">
+                        
+                        <amp-img
+                        src="images/sublistu.png" 
+                        class="sublist-block-list-item-image" 
+                        alt="-"
+                        layout="responsive"
+                        width="266"
+                        height="150"
+                        ></amp-img>
+                        <div class="sublist-block-list-item-desc">
+                            <div class="sublist-block-list-item-desc-title">
+                                Title
+                            </div>
+                            <div class="sublist-block-list-item-desc-filler">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis purus quis ligula fringilla placerat.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sublist-block-list-item">
+                       
+                        <amp-img
+                        src="images/sublistd.png" 
+                        class="sublist-block-list-item-image" 
+                        alt="-"
+                        layout="responsive"
+                        width="266"
+                        height="150"
+                        ></amp-img>
+                        <div class="sublist-block-list-item-desc">
+                            <div class="sublist-block-list-item-desc-title">
+                                Title
+                            </div>
+                            <div class="sublist-block-list-item-desc-filler">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis purus quis ligula fringilla placerat.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <div class="picture-block">
+            <div class="picture-block-desc">
+                <div class="picture-block-desc-title">
+                    Standard Picture Section
+                </div>
+                <hr class="picture-block-desc-line">
+                <div class="picture-block-desc-filler">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis purus quis ligula fringilla placerat. Sed quis lacus at nibh convallis lacinia vitae non augue. Maecenas eu lacus nibh. Duis bibendum efficitur dignissim.
+                </div>
+                <div class="picture-block-desc-filler">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis purus quis ligula fringilla placerat.
+                </div>
+            </div> 
+            <amp-img
+            src="images/picture_block_image.png" 
+            class="picture-block-image" 
+            alt="PICTURE BLOCK IMAGE"
+            layout="responsive"
+            width="266"
+            height="150"
+            ></amp-img>
+        </div>
+
+        <div class="awesome-block">
+            <div class="awesome-block-title">
+                WHY THIS IS AWESOME
+            </div>
+            <hr class="awesome-block-line">
+            <div class="awesome-block-filler">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+            <div class="awesome-block-list">
+                <div class="awesome-block-list-item">
+                    <amp-img
+                    src="images/awesome_bulb.png" 
+                    class="awesome-block-list-item-icon" 
+                    alt="ICON"
+                    layout="responsive"
+                    width="266"
+                    height="150"
+                    ></amp-img>
+                    <div class="awesome-block-list-item-title">
+                        Thoughtful Design
+                    </div>
+                    <div class="awesome-block-filler">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis purus quis ligula fringilla placerat. Sed quis lacus at nibh convallis lacinia vitae non augue. 
+                    </div>
+                </div>
+                <div class="awesome-block-list-item">
+                    <amp-img
+                    src="images/awesome_key.png" 
+                    class="awesome-block-list-item-icon" 
+                    alt="ICON"
+                    layout="responsive"
+                    width="266"
+                    height="150"
+                    ></amp-img>
+                    <div class="awesome-block-list-item-title">
+                        Well Crafted
+                    </div>
+                    <div class="awesome-block-filler">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis purus quis ligula fringilla placerat. Sed quis lacus at nibh convallis lacinia vitae non augue. 
+                    </div>
+                </div>
+                <div class="awesome-block-list-item">
+                    <amp-img
+                    src="images/awesome_light.png" 
+                    class="awesome-block-list-item-icon" 
+                    alt="ICON"
+                    layout="responsive"
+                    width="266"
+                    height="150"
+                    ></amp-img>
+                    <div class="awesome-block-list-item-title">
+                        Easy to Customize
+                    </div>
+                    <div class="awesome-block-filler">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis purus quis ligula fringilla placerat. Sed quis lacus at nibh convallis lacinia vitae non augue. 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pricing-block">
+            <div class="pricing-block-title">
+                PRICING OPTIONS
+            </div>
+            <hr class="pricing-block-line">
+            <div class="pricing-block-filler">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+            <div class="pricing-block-list">
+                <div class="pricing-block-list-item">
+                    <div class="pricing-block-list-item-title">
+                        Basic
+                    </div>
+                    <div class="pricing-block-list-item-cost">
+                        <div class="pricing-block-list-item-cost-sign">
+                            $
+                        </div>
+                        <div class="pricing-block-list-item-cost-number">
+                            0
+                        </div>
+                    </div>
+                    <div class="pricing-block-list-item-desc">
+                        Free for Life
+                    </div>
+                    <div class="pricing-block-list-item-perks-list">
+                        <div class="pricing-block-list-item-perks-list-item">
+                            1 GB OF SPACE
+                        </div>
+                        <div class="pricing-block-list-item-perks-list-item">
+                            10 GB OF BANDWIDTH
+                        </div>
+                        <div class="pricing-block-list-item-perks-list-item">
+                            3 WEBSITES
+                        </div>
+                        <div class="pricing-block-list-item-perks-list-item">
+                            BASIC CUSTOMIZATION
+                        </div>
+                        <div class="pricing-block-list-item-perks-list-item">
+                            WORDPRESS INTEGRATION
+                        </div>
+                        <div class="pricing-block-list-item-perks-list-item">
+                            EMAIL SUPPORT
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-block-list-item">
+                    <div class="pricing-block-list-item-title">
+                        Professional
+                    </div>
+                    <div class="pricing-block-list-item-cost">
+                        <div class="pricing-block-list-item-cost-sign">
+                            $
+                        </div>
+                        <div class="pricing-block-list-item-cost-number">
+                            19
+                        </div>
+                    </div>
+                    <div class="pricing-block-list-item-desc">
+                        Monthly Payment
+                    </div>
+                    <div class="pricing-block-list-item-popular">
+                        OUR MOST POPULAR
+                    </div>
+                    <div class="pricing-block-list-item-perks-list">
+                        <div class="pricing-block-list-item-perks-list-item">
+                            5 GB OF SPACE
+                        </div>
+                        <div class="pricing-block-list-item-perks-list-item">
+                            50 GB OF BANDWIDTH
+                        </div>
+                        <div class="pricing-block-list-item-perks-list-item">
+                            12 WEBSITES
+                        </div>
+                        <div class="pricing-block-list-item-perks-list-item">
+                            ADVANCED CUSTOMIZATION
+                        </div>
+                        <div class="pricing-block-list-item-perks-list-item">
+                            WORDPRESS INTEGRATION
+                        </div>
+                        <div class="pricing-block-list-item-perks-list-item">
+                            EMAIL SUPPORT
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-block-list-item">
+                    <div class="pricing-block-list-item-title">
+                        Enterprise
+                    </div>
+                    <div class="pricing-block-list-item-cost">
+                        <div class="pricing-block-list-item-cost-sign">
+                            $
+                        </div>
+                        <div class="pricing-block-list-item-cost-number">
+                            70
+                        </div>
+                    </div>
+                    <div class="pricing-block-list-item-desc">
+                        Monthly Payment
+                    </div>
+                    <div class="pricing-block-list-item-perks-list">
+                        <div class="pricing-block-list-item-perks-list-item">
+                            UNLIMITED SPACE
+                        </div>
+                        <div class="pricing-block-list-item-perks-list-item">
+                            UNLIMITED BANDWIDTH
+                        </div>
+                        <div class="pricing-block-list-item-perks-list-item">
+                            100 WEBSITES
+                        </div>
+                        <div class="pricing-block-list-item-perks-list-item">
+                            ADVANCED CUSTOMIZATION
+                        </div>
+                        <div class="pricing-block-list-item-perks-list-item">
+                            WORDPRESS INTEGRATION
+                        </div>
+                        <div class="pricing-block-list-item-perks-list-item">
+                            EMAIL SUPPORT
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-block">
+            <div class="review-block-title">
+                WHAT OUR CUSTOMERS ARE SAYING
+            </div>
+            <hr class="review-block-line">
+            <div class="review-block-filler">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+            <div class="review-block-list">
+                <div class="review-block-list-item">
+                    <div class="review-block-list-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis purus quis ligula fringilla placerat. Sed quis lacus at nibh convallis lacinia vitae non augue.
+                    </div>
+                    <div class="review-block-list-item-person">
+                        <amp-img
+                        src="images/chel.png" 
+                        class="review-block-list-item-person-image" 
+                        alt="PP"
+                        layout="responsive"
+                        width="266"
+                        height="150"
+                        ></amp-img>
+                        <div class="review-block-list-item-person-info">
+                            <div class="review-block-list-item-person-info-name">
+                                Jeremy H.
+                            </div>
+                            <div class="review-block-list-item-person-info-position">
+                                Manager
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-block-list-item">
+                    <div class="review-block-list-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis purus quis ligula fringilla placerat. Sed quis lacus at nibh convallis lacinia vitae non augue.
+                    </div>
+                    <div class="review-block-list-item-person">
+                        <amp-img
+                        src="images/chel.png" 
+                        class="review-block-list-item-person-image" 
+                        alt="PP"
+                        layout="responsive"
+                        width="266"
+                        height="150"
+                        ></amp-img>
+                        <div class="review-block-list-item-person-info">
+                            <div class="review-block-list-item-person-info-name">
+                                John S.
+                            </div>
+                            <div class="review-block-list-item-person-info-position">
+                                Freelancer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-block-list-item">
+                    <div class="review-block-list-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis purus quis ligula fringilla placerat. Sed quis lacus at nibh convallis lacinia vitae non augue.
+                    </div>
+                    <div class="review-block-list-item-person">
+                        <amp-img
+                        src="images/chel.png" 
+                        class="review-block-list-item-person-image" 
+                        alt="PP"
+                        layout="responsive"
+                        width="266"
+                        height="150"
+                        ></amp-img>
+                        <div class="review-block-list-item-person-info">
+                            <div class="review-block-list-item-person-info-name">
+                                Susan W.
+                            </div>
+                            <div class="review-block-list-item-person-info-position">
+                                Photographer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="design-block">
+            <div class="design-block-title">
+                STYLISH AXURE DESIGN
+            </div>
+            <hr class="design-block-line">
+            <div class="design-block-filler">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+            <button class="design-block-button">
+                Download
+            </button>
+        </div>
+
+        <div class="contact-block">
+            <div class="contact-block-title">
+                CONTACT US
+            </div>
+            <hr class="contact-block-line">
+            <div class="contact-block-filler">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+            <div class="contact-block-info">
+                <div class="contact-block-info-list">
+                    <input class="contact-block-info-list-item" placeholder="Name">
+                    <input class="contact-block-info-list-item" placeholder="Email">
+                    <input class="contact-block-info-list-item" placeholder="Subject">
+                </div>
+                <textarea class="contact-block-info-textarea" placeholder="Message"></textarea>
+            </div>
+            <button class="contact-block-button">
+                Send Message
+            </button>
+        </div>
+
+        <div class="footer-block">
+            <amp-img
+            src="images/logos.png" 
+            class="footer-block-icons" 
+            alt="-"
+            layout="responsive"
+            width="266"
+            height="150"
+            ></amp-img>
+            <div class="footer-block-trademark">
+                (c) 2015 Axure Themes
+            </div>
+        </div>
+    </body>
+</html>
